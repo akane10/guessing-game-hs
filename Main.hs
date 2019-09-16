@@ -1,9 +1,6 @@
 import           System.Random
 import           Text.Read
 
-number :: IO Int
-number = randomRIO (0, 100)
-
 guessLoop :: Int -> IO ()
 guessLoop num = do
   putStrLn "Please input your guess"
@@ -25,5 +22,5 @@ guessLoop num = do
 main :: IO()
 main = do
   putStrLn "Guess the number!"
-  num <- number
+  num <- randomRIO (0, 100)
   guessLoop num

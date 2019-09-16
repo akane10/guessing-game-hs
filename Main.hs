@@ -19,7 +19,7 @@ guessLoop num = do
                     guessLoop num
                 EQ -> putStrLn "yay... you win"
     _ -> do
-      putStrLn "oopss looks like it wasn't number, was it?"
+      putStrLn "oopss looks like it wasn't a number, was it?"
       guessLoop num
 
 main :: IO()

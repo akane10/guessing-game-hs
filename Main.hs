@@ -24,6 +24,6 @@ guessLoop num life = do
 
 main :: IO()
 main = do
-  putStrLn "Guess the number!"
+  putStrLn "Guess the number! Between 0 and 100"
   num <- randomRIO (0, 100)
   guessLoop num 7

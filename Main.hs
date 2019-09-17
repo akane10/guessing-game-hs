@@ -2,10 +2,10 @@ import           System.Random
 import           Text.Read
 
 guessLoop :: Int -> Int -> IO ()
-guessLoop _ 0 = putStrLn "Too bad you're out of life"
+guessLoop num 0 = putStrLn $ "\nToo bad you're out of life, the secret number is " ++ show num
 guessLoop num life = do
+  putStrLn $ "\nRemain life: " ++ show life
   putStrLn "Please input your guess"
-  putStrLn $ "remain life: " ++ show life
   guessed <- getLine
   -- putStrLn (show num)
   case readMaybe guessed of
